@@ -455,8 +455,10 @@ em { font-style: normal; color: var(--gold); }
   font-size: clamp(90px, 19vw, 220px);
   line-height: 0.85;
   letter-spacing: 8px;
-  color: rgba(255,255,255,0.45);
+  color: rgba(255,255,255,0.88);
   opacity: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   animation: rise 0.9s 0.5s var(--ease) forwards;
 }
 .title-main {
@@ -469,6 +471,8 @@ em { font-style: normal; color: var(--gold); }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   animation: rise 0.9s 0.65s var(--ease) forwards, shimmer 4s 2s linear infinite;
   opacity: 0;
 }
@@ -477,8 +481,10 @@ em { font-style: normal; color: var(--gold); }
   font-size: clamp(40px, 8vw, 96px);
   line-height: 1;
   letter-spacing: 12px;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.88);
   opacity: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   animation: rise 0.9s 0.8s var(--ease) forwards;
 }
 
