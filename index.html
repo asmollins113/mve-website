@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Most Valuable Entertainment</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=3" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="https://instagram.com/mostvaluable.ent" target="_blank" rel="noopener" class="nav-logo">
+        <img src="images/logo.png" alt="Most Valuable Entertainment" class="nav-logo-img" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li class="nav-dropdown-wrap">
+          <a href="#events" class="nav-dropdown-trigger">Events <span class="nav-arrow">▾</span></a>
+          <div class="nav-dropdown">
+            <a href="#events" class="nav-drop-item">Upcoming Events</a>
+            <a href="#past" class="nav-drop-item">Past Events</a>
+          </div>
+        </li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" class="mobile-link">About</a>
+      <div class="mobile-dropdown">
+        <button class="mobile-link mobile-drop-trigger" id="mobileEventsTrigger" style="background:transparent;border:none;outline:none;box-shadow:none;-webkit-appearance:none;appearance:none;padding:0;cursor:pointer;width:100%;text-align:left;">Events <span class="nav-arrow" style="display:inline-block;transition:transform 0.2s;">▾</span></button>
+        <div id="mobileEventsMenu" style="display:none;flex-direction:column;padding-left:20px;border-left:1px solid rgba(212,168,67,0.3);margin-top:10px;">
+          <a href="#events" style="color:#aaa;padding:7px 0;display:block;font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;">Upcoming Events</a>
+          <a href="#past" style="color:#aaa;padding:7px 0;display:block;font-size:13px;letter-spacing:1px;text-transform:uppercase;text-decoration:none;">Past Events</a>
+        </div>
+        <script>
+          document.getElementById('mobileEventsTrigger').addEventListener('click', function(e) {
+            e.stopPropagation();
+            var m = document.getElementById('mobileEventsMenu');
+            var arrow = this.querySelector('.nav-arrow');
+            if (m.style.display === 'flex') {
+              m.style.display = 'none';
+              arrow.style.transform = 'rotate(0deg)';
+            } else {
+              m.style.display = 'flex';
+              m.style.flexDirection = 'column';
+              arrow.style.transform = 'rotate(180deg)';
+            }
+          });
+        </script>
+      </div>
+      <a href="#contact" class="mobile-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+    <div class="hero-glow hero-glow-3"></div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Orlando's Nightlife Events Brand
+      </div>
+      <h1 class="hero-title">
+        <span class="title-top">MOST</span>
+        <span class="title-main">VALUABLE</span>
+        <span class="title-bottom">ENTERTAINMENT</span>
+      </h1>
+      <p class="hero-tagline">We Don't Just Throw Parties — We Create Moments</p>
+      <div class="hero-actions">
+        <a href="#events" class="btn btn-primary">
+          <span>View Events</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost">Get In Touch</a>
+      </div>
+      </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-strip">
+    <div class="marquee-inner">
+      <div class="marquee-track">
+        <span>Most Valuable Entertainment</span>
+        <span class="sep">✦</span>
+        <span>College Nights</span>
+        <span class="sep">✦</span>
+        <span>EDM Experiences</span>
+        <span class="sep">✦</span>
+        <span>DJ Takeovers</span>
+        <span class="sep">✦</span>
+        <span>Premium Nightlife</span>
+        <span class="sep">✦</span>
+        <span>Most Valuable Entertainment</span>
+        <span class="sep">✦</span>
+        <span>College Nights</span>
+        <span class="sep">✦</span>
+        <span>EDM Experiences</span>
+        <span class="sep">✦</span>
+        <span>DJ Takeovers</span>
+        <span class="sep">✦</span>
+        <span>Premium Nightlife</span>
+        <span class="sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-layout">
+        <div class="about-left">
+          <div class="pill-label">Who We Are</div>
+          <h2 class="section-heading">The Most <em>Valuable</em><br/>Experience<br/>in the Room</h2>
+          <p class="about-body">It started with three Rollins students who shared a passion for music and a simple belief that Orlando deserved better nights. What began as an idea became Most Valuable Entertainment: an Orlando-based event production, promotion, and booking company built from the ground up by people who actually love the culture.</p>
+          <p class="about-body">We curate the city's premier nightlife experiences, bringing the community together through music, energy, and unforgettable moments. Whether we're producing our own events or promoting the best nights Orlando has to offer, we don't just fill a room. We create spaces where every person feels like the most valuable attendee, from the DJ booth to the dance floor.</p>
+          <a href="#contact" class="btn btn-primary mt-32">
+            <span>Work With Us</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- UPCOMING EVENTS -->
+  <section id="events" class="events-section section">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-label">What's Next</div>
+        <h2 class="section-heading">Upcoming <em>Events</em></h2>
+      </div>
+
+      <div class="coming-soon-block">
+        <div class="cs-bg-glow"></div>
+        <div class="cs-content">
+          <div class="cs-icon">📅</div>
+          <h3>Stay Locked In</h3>
+          <p>No events announced yet — but the next one is going to be legendary. Follow us to be first in line when tickets drop.</p>
+          <div class="follow-row">
+            <a href="https://instagram.com/mostvaluable.ent" target="_blank" rel="noopener" class="follow-btn">
+              <span>📸</span> Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAST EVENTS -->
+  <section id="past" class="past-section section">
+    <div class="container">
+      <div class="section-header">
+        <div class="pill-label">The Highlight Reel</div>
+        <h2 class="section-heading">Past <em>Events</em></h2>
+      </div>
+      <div class="events-grid" id="pastGrid">
+
+        <!-- MVE x Nocturna — January 16, 2026 -->
+        <article class="ecard" data-type="dj">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/robinson.jpg'); background-size: cover; background-position: center;">
+            
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">January 17, 2026 · 10PM</span>
+            <h3 class="ecard-title">MVE x Nocturna</h3>
+            <p class="ecard-venue">📍 The Robinson Cocktail Room · 61 E Pine St</p>
+            <p class="ecard-djs">Wiley b2b Toof · Tito b2b Rene</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Shamrock Block Party — March 14, 2025 -->
+        <article class="ecard">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/shamrock.png'); background-size: cover; background-position: center;">
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">March 14, 2025 · 12PM–8PM</span>
+            <h3 class="ecard-title">Orlando Shamrock Block Party</h3>
+            <p class="ecard-venue">📍 Wall Street Plaza, Downtown Orlando</p>
+            <p class="ecard-djs">Reverb · Unruly · Wiley · JN · Toof · Santo · Tito b2b Shane · Roni</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Night Shift III — Feb 13, 2025 -->
+        <article class="ecard">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/night-shift-3.png'); background-size: cover; background-position: center;">
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">February 13, 2025</span>
+            <h3 class="ecard-title">Night Shift III</h3>
+            <p class="ecard-venue">📍 Fixtion Orlando</p>
+            <p class="ecard-djs">Andres · JN · Shallr · Toof · Unruly · Wiley · Yavi</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Friday Groove — Nov 21, 2024 -->
+        <article class="ecard">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/friday-groove.png'); background-size: cover; background-position: center;">
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">November 21, 2024 · 10PM · No Cover</span>
+            <h3 class="ecard-title">Friday Groove</h3>
+            <p class="ecard-venue">📍 McQueens · 33 E Pine St</p>
+            <p class="ecard-djs">Andres · Janjo · Shallr · Unodos · Wiley</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Rave Shift — Nov 9, 2024 -->
+        <article class="ecard" data-type="edm">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/rave-shift.jpg'); background-size: cover; background-position: center;">
+            
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">November 9, 2024 · 10PM</span>
+            <h3 class="ecard-title">Rave Shift — Festival Edition</h3>
+            <p class="ecard-venue">📍 Say Les' · 1 S Orange Ave</p>
+            <p class="ecard-djs">Andres · Avner · Roni · Toof · Unruly · Wiley</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- The Night Before Halloween — Oct 30, 2024 -->
+        <article class="ecard" data-type="dj">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/halloween.jpg'); background-size: cover; background-position: center top; background-color: #1a0000;">
+            
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">October 30, 2024</span>
+            <h3 class="ecard-title">The Night Before Halloween</h3>
+            <p class="ecard-venue">📍 56 E Pine St — Sessions</p>
+            <p class="ecard-djs">Wiley · Roni · Toof · Unruly · Santo</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Night Shift Pt 2 — Sep 27, 2024 -->
+        <article class="ecard">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/night-shift-2.jpg'); background-size: cover; background-position: center;">
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">September 27, 2024</span>
+            <h3 class="ecard-title">Night Shift Pt 2 — Sessions</h3>
+            <p class="ecard-venue">📍 56 E Pine St</p>
+            <p class="ecard-djs">Andres · Shallr · Toof · SMO · Unruly · Wiley</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Meet Me at YAZ — Sep 6, 2024 -->
+        <article class="ecard">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/yaz.jpg'); background-size: cover; background-position: center top;">
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">September 6, 2024 · 10PM</span>
+            <h3 class="ecard-title">Meet Me at YAZ</h3>
+            <p class="ecard-venue">📍 114 N Orange Ave · 21+</p>
+            <p class="ecard-djs">Roni · Wiley b2b SMO · Toof</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Night Shift — Aug 30, 2024 -->
+        <article class="ecard">
+          <div class="ecard-visual flyer-card" style="background-image: url('images/night-shift-1.jpg'); background-size: cover; background-position: center;">
+            <div class="ecard-overlay"></div>
+          </div>
+          <div class="ecard-body">
+            <span class="ecard-date">August 30, 2024 · 10PM</span>
+            <h3 class="ecard-title">Night Shift</h3>
+            <p class="ecard-venue">📍 Fixtion Orlando · 15 N Orange Ave</p>
+            <p class="ecard-djs">Andres · Shallr · Sharktoof · SMO · Unruly · Wiley</p>
+            <div class="ecard-foot">
+              <span class="badge-past">Past Event</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="cta-band-glow"></div>
+    <div class="container cta-band-inner">
+      <div>
+        <h2 class="cta-heading">Ready to be part of the next one?</h2>
+        <p class="cta-sub">Partner with MVE, collaborate on an event, or just make sure you're on the list.</p>
+      </div>
+      <a href="#contact" class="btn btn-primary btn-lg">
+        <span>Let's Talk</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact-section section">
+    <div class="container">
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <div class="pill-label">Get In Touch</div>
+          <h2 class="section-heading">Let's Make<br/><em>Something</em><br/>Unforgettable</h2>
+          <p class="about-body">Venue inquiries, event partnerships, or general collabs — we're always open to building with the right people.</p>
+          <a href="mailto:Mostvaluableentertainment@gmail.com" class="btn btn-primary mt-32">
+            <span>Send Us An Email</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="contact-right">
+          <div class="social-stack">
+            <a href="https://instagram.com/mostvaluable.ent" target="_blank" rel="noopener" class="social-row">
+              <div class="social-left">
+                <span class="social-ico">📸</span>
+                <div>
+                  <strong>Instagram</strong>
+                  <span>@mostvaluable.ent</span>
+                </div>
+              </div>
+              <span class="social-arrow">→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/logo.png" alt="Most Valuable Entertainment" class="footer-logo-img" />
+      </div>
+      <nav class="footer-nav">
+        <a href="#about">About</a>
+        <a href="#events">Events</a>
+        <a href="#past">Past</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 MVE. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="main.js?v=7"></script>
+</body>
+</html>
