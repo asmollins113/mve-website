@@ -68,7 +68,7 @@ em { font-style: normal; color: var(--gold); }
 .section-heading em {
   font-style: normal;
   color: var(--gold);
-  text-shadow: 0 0 12px rgba(255, 212, 74, 0.5), 0 0 30px rgba(255, 200, 40, 0.25);
+  text-shadow: 0 0 8px rgba(255, 212, 74, 0.2), 0 0 16px rgba(255, 200, 40, 0.1);
 }
 
 .section-header {
@@ -413,11 +413,11 @@ em { font-style: normal; color: var(--gold); }
   background: rgba(212, 168, 67, 0.08);
   border: 1px solid var(--border-gold);
   color: var(--gold);
-  font-size: 7px;
+  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  padding: 5px 12px;
+  padding: 8px 20px;
   border-radius: 999px;
   margin-bottom: 32px;
   opacity: 0;
@@ -459,7 +459,7 @@ em { font-style: normal; color: var(--gold); }
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  filter: drop-shadow(0 0 18px rgba(255, 212, 74, 0.45)) drop-shadow(0 0 40px rgba(255, 200, 40, 0.2));
+  filter: drop-shadow(0 0 8px rgba(255, 212, 74, 0.2)) drop-shadow(0 0 20px rgba(255, 200, 40, 0.1));
   animation: rise 0.9s 0.65s var(--ease) forwards, shimmer 4s 2s linear infinite;
   opacity: 0;
 }
